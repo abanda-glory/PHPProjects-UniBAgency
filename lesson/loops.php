@@ -20,8 +20,18 @@
 
 <?php
 $counter = $_POST["counter"];
-
+// for loop
 for ($i = $counter; $i > 0; $i--) {
     echo $i . "<br>";
+}
+
+// while loop
+$seconds = 0;
+$running = true;
+while ($running) {
+
+    // wait for 1 second
+    $seconds++;
+    echo $seconds . "<br>";
 }
 ?>
