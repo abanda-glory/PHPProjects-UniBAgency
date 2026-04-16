@@ -17,3 +17,26 @@ saveLog($statusMessage);
 // STEP 4: Feedback for the user
 echo "Action: " . $statusMessage . PHP_EOL;
 echo "Check your '" . DATA_FOLDER . "' folder for the log file!" . PHP_EOL;
+
+//Record the current visit
+recordVisitor();
+
+//Display the count
+echo "<h1>Total Visitors: " . visitorCount() . "</h1>";
+
+//Reading file using file_get_content()
+//file_get_content reads the whole file into one single string
+echo "<h3>Method A: file_get_content(RAW String)</h3>";
+$contentString = file_get_contents(VISITOR_FILE);
+echo "<pre>" . $contentString . "</pre>";
+
+echo "<hr>";
+
+//Reading file using file()
+//file() reads the file into an array where each line is an item.
+echo "<h3>Method B: file() (Array Processing)</h3>";
+$contentArray = file(VISITOR_FILE);
+
+echo "<pre>";
+print_r($contentArray);
+echo "</pre>";
