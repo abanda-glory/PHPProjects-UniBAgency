@@ -31,9 +31,9 @@ echo "Browser Used: " . $_SERVER['HTTP_USER_AGENT'] . "<br>";
 echo "<hr>";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    echo "Name: " . $_POST['user-name'] . "<br>";
-    echo "City: " . $_POST['city'] . "<br>";
-    echo "Age: " . $_POST['age'] . "<br>";
-    echo "Action: " . $_POST['action'] . "<br>";
+    echo "Name: " . htmlspecialchars($_POST['user-name']) . "<br>";
+    echo "City: " . htmlspecialchars($_POST['city']) . "<br>";
+    echo "Age: " . htmlspecialchars($_POST['age']) . "<br>";
+    echo "Action: " . htmlspecialchars($_POST['action']) . "<br>";
 }
 ?>

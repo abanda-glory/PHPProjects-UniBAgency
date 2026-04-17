@@ -27,9 +27,9 @@ echo "Method Used: " . $_SERVER['REQUEST_METHOD'] . "<br>";
 echo "Browser Used: " . $_SERVER['HTTP_USER_AGENT'] . "<br>";
 
 if (!empty($_GET)) {
-    echo "Name: " . $_GET['user-name'] . "<br>";
-    echo "City: " . $_GET['city'] . "<br>";
-    echo "Age: " . $_GET['age'] . "<br>";
+    echo "Name: " . htmlspecialchars($_GET['user-name']) . "<br>";
+    echo "City: " . htmlspecialchars($_GET['city']) . "<br>";
+    echo "Age: " . htmlspecialchars($GET['age']) . "<br>";
 }
 
 ?>
