@@ -54,6 +54,25 @@ if (!empty($_SERVER['REQUEST_METHOD'] == 'POST')) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
+
+    <style>
+        .error {
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        .success {
+            color: green;
+            font-weight: bold;
+            background: #e0ffe0;
+            padding: 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body>
