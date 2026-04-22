@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         // Generate Unique Names
-        $timestamp = date('Ymd_His');
+        $timestamp = date('Ymd');
         $first_name = preg_replace("/[^a-zA-Z0-9]/", "", $_POST['username']);
 
         $new_profile_name = "profile_" . $timestamp . "_" . $first_name . "." . $uploaded_profile_pic_ext;
